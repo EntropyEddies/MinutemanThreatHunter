@@ -55,20 +55,20 @@ git push --set-upstream origin development_{USERNAME}
 
 > Example: `git push --set-upstream origin development_topaz`
 
-:warning: The `--set-upstream` flag is only required the first time you push to a new branch. After that, you can just use `git push origin {BRANCH_NAME}`s
+:warning: The `--set-upstream` flag is only required the first time you push to a new branch. After that, you can just use `git push origin {BRANCH_NAME}`
 
 ### 6. Submit a pull request
 
 - Go to the repository on [GitHub](https://github.com/EntropyEddies/MinutemanThreatHunter)
 - Click on the `Pull requests` tab
-    - ![PR](./documentation/images/pull_request1.png)
+    - ![PR](./images/pull_request1.png)
 - Click on the `New pull request` button
 - In the two dropdown tabs select `development` as the base branch and `development_{USERNAME}` as the compare branch
-    - ![PR](./documentation/images/pull_request2.png)
+    - ![PR](./images/pull_request2.png)
 - Click on the `Create pull request` button
 - Add a descriptive title and description of your changes
 - Click on the `Create pull request` button
-    - ![PR](./documentation/images/pull_request3.png)
+    - ![PR](./images/pull_request3.png)
 - **TADA!** You have submitted a pull request! :tada:
 
 ### 7. Wait for approval
