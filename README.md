@@ -1,4 +1,11 @@
 # MinutemanThreatHunter
+
+# :exclamation: DEVELOPERS START HERE:
+
+## Read: [How To Contribute](./documentation/how-to-git.md)
+
+---
+
 :warning: [PRIVATE FOR NOW; WILL BE OPENED POSTHASTE] :warning:
 
 ## Overview
