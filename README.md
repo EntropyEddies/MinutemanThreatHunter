@@ -16,7 +16,7 @@ Minuteman Threat Hunter is a tool meant to assist in mapping your internal netwo
 
 - git clone this repo
 - cd into the repo
-- run `docker build -t minuteman .`
+- run `docker build -t debian-minuteman .`
   - if you want to rebuild from scratch:
   - `docker build --no-cache -t debian-minuteman .` 
 - run `docker compose up -d`
