@@ -1,0 +1,49 @@
+version: '3.8'
+services:
+  minuteman:
+    image: debian-minuteman:latest  # Replace with the correct image tag
+    volumes:
+      - ./reporting/root:/root
+      - ./reporting/scans:/home/minuteman/Scans
+    networks:
+      internalnet:
+        ipv4_address: 172.20.0.2
+    # Other configurations...
+
+  webserver:
+    image: nginx
+    networks:
+      internalnet:
+        ipv4_address: 172.20.0.3
+        aliases:
+          - web
+    # Other configurations...
+
+  mailserver:
+    image: mailhog/mailhog
+    networks:
+      internalnet:
+        ipv4_address: 172.20.0.4
+    # Other configurations...
+
+  sshserver:
+    image: rastasheep/ubuntu-sshd
+    networks:
+      internalnet:
+        ipv4_address: 172.20.0.5
+    # Other configurations...
+
+  ftpserver:
+    image: stilliard/pure-ftpd
+    networks:
+      internalnet:
+        ipv4_address: 172.20.0.6
+    # Other configurations...
+
+networks:
+  internalnet:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.20.0.0/24

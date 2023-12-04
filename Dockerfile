@@ -81,8 +81,9 @@ RUN sed -i 's/# nmap/nmap/g' /home/minuteman/.zshrc
 
 ## MUST BE LAST LINES
 # Set 'minuteman' as the default user
-SHELL ["/usr/bin/zsh", "-c"]
 USER minuteman
 
 # Set the default directory to /home/minuteman
 WORKDIR /home/minuteman/
+
+CMD ["/usr/bin/zsh"]

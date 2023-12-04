@@ -1,0 +1,50 @@
+# Nmap 7.93 scan initiated Mon Dec  4 18:38:21 2023 as: nmap -vv -sSCV -oN Scans/nmap.init 172.20.0.3-6
+Nmap scan report for minutemanthreathunter-webserver-1.minutemanthreathunter_internalnet (172.20.0.3)
+Host is up, received arp-response (0.0000040s latency).
+Scanned at 2023-12-04 18:38:21 UTC for 24s
+Not shown: 999 closed tcp ports (reset)
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 64 nginx 1.25.3
+| http-methods: 
+|_  Supported Methods: GET HEAD
+|_http-title: Welcome to nginx!
+|_http-server-header: nginx/1.25.3
+MAC Address: 02:42:AC:14:00:03 (Unknown)
+
+Nmap scan report for minutemanthreathunter-mailserver-1.minutemanthreathunter_internalnet (172.20.0.4)
+Host is up, received arp-response (0.0000050s latency).
+Scanned at 2023-12-04 18:38:21 UTC for 24s
+Not shown: 999 closed tcp ports (reset)
+PORT     STATE SERVICE REASON         VERSION
+1025/tcp open  smtp    syn-ack ttl 64 Postfix smtpd
+|_smtp-commands: Hello minutemanthreathunter-mailserver-1.minutemanthreathunter_internalnet, PIPELINING, AUTH PLAIN
+MAC Address: 02:42:AC:14:00:04 (Unknown)
+Service Info: Host: mailhog.example
+
+Nmap scan report for minutemanthreathunter-sshserver-1.minutemanthreathunter_internalnet (172.20.0.5)
+Host is up, received arp-response (0.0000050s latency).
+Scanned at 2023-12-04 18:38:21 UTC for 24s
+Not shown: 999 closed tcp ports (reset)
+PORT   STATE SERVICE REASON         VERSION
+22/tcp open  ssh     syn-ack ttl 64 OpenSSH 7.6p1 Ubuntu 4 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 d78700a37828638370242a8882980d5c (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC9NiRfkrMv08eGphrb0Nu1dXrf+8FRTPCjI+FXO5SJM1xj2bDknSMy4ncavZ/0qMWNB5YkGxPIn1DkOm9gYuOy8PGlcL1rLrG+jE1YjGqDy3HrIP3CKkyA5YrZDQut1EvETmlVOK/VW9d6lAC+6qtjk+Npm4IsmaUAlJoG2E9dU2FpCio2eAknGe4ZvCQZrTk49qyrpj5XAOa/TWBgJE/9kktl7amQoqRSoB4RGnnpoKGlpJswqIFmsZhHRgX+nPqIxcGbJ22z8EDjDUDt9z8lY4/UTIPWkjSkyRpwgMJar7baFzuV4IA3yH8Q+sLuEbMP5NWHdIAk8RyMwG7ifUsT
+|   256 433f41e98945066ff642c46a7037f81d (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBM8OPjNQMlQ1tIwWHnCYdAYr44KBXU/viuigD5646W4J5rvUC9Kuv0eX2aaVOyPFxhqzZeJftcriA6iQrL/0p9c=
+|   256 afbd839ed5f1dcc2953c5d9bad0ffbf1 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFjDZ9C89nUVGQ1qZzG/X0onkmcju4kWJ2uTLBdIXsy1
+MAC Address: 02:42:AC:14:00:05 (Unknown)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Nmap scan report for minutemanthreathunter-ftpserver-1.minutemanthreathunter_internalnet (172.20.0.6)
+Host is up, received arp-response (0.0000050s latency).
+Scanned at 2023-12-04 18:38:21 UTC for 24s
+Not shown: 999 closed tcp ports (reset)
+PORT   STATE SERVICE REASON         VERSION
+21/tcp open  ftp     syn-ack ttl 64 Pure-FTPd
+MAC Address: 02:42:AC:14:00:06 (Unknown)
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Dec  4 18:38:45 2023 -- 4 IP addresses (4 hosts up) scanned in 24.55 seconds
