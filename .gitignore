@@ -1,6 +1,7 @@
 ## LOCAL IGNORES
 local/
 .env
+*.doc*
 
 #############################################
 ## RUST IGNORE (maybe include rust, maybe not, who knows)

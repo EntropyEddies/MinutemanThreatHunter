@@ -3,7 +3,7 @@
 FROM debian:latest
 
 # Set the maintainer label
-LABEL maintainer="MinuteMon@EntryEddie.xyz"
+LABEL maintainer="EntropyEddies@xyz.org"
 
 ## Switch shell to bash
 SHELL ["/bin/bash", "-c"]
