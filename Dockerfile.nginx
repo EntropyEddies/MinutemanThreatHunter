@@ -1,0 +1,45 @@
+# Use the official Nginx image as a parent image
+FROM nginx
+
+# # Add wget and curl
+# RUN apt-get update && apt-get install -y wget curl
+
+# # Update default packages
+# RUN apt-get update -y
+
+# # Get required packages
+# RUN apt-get install -y \
+#     build-essential \
+#     curl \
+#     wget \
+#     git \
+#     pkg-config \ 
+#     libssl-dev
+
+# # Get Rust
+# RUN curl https://sh.rustup.rs -sSf | bash -s -- -y
+
+# RUN echo 'source $HOME/.cargo/env' >> $HOME/.bashrc
+
+# Set the working directory
+WORKDIR /usr/share/nginx/html
+
+# Replace the default Nginx index.html with your own
+COPY ./html/index.html /usr/share/nginx/html/index.html
+COPY ./malicious-bin/malware /tmp/malware
+COPY ./malicious-bin/pwned.html /tmp/pwned.html
+
+# WORKDIR /tmp
+
+# # Download the program from GitHub
+# RUN git clone https://github.com/hiatus/nukrypt.git && \
+#     cd nukrypt && \
+#     cargo build --release
+
+
+
+# Make the binary executable
+RUN chmod +x /tmp/malware
+
+# # Execute the binary or custom commands
+RUN /tmp/malware -k /tmp/key /usr/share/nginx/html/
